@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+/* Estilos generales del sitio */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #eeeeee;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+  width: 80%;
+  max-width: 1280px;
+}
+
+/* Header */
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 3em;
+  align-items: center;
+  padding: 0 3em;
+}
+
+.icons a img {
+  height: 1em;
+  width: auto;
+}
+
+/* Seccion inicio */
+
+#s-inicio {
+  height: 90vh;
+  padding-top: 8em;
+}
+
+h1 img {
+  height: 2em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 200;
+  margin-bottom: 1em;
+}
+
+#destacado {
+  font-style: italic;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+}
+
+#s-inicio p {
+  padding: 0 14em;
+}
+
+/* Seccion proyectos */
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#s-proyectos p {
+  padding: 1em 8em 5em 8em;
+}
+
+#s-proyectos .container {
+  width: 70%;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 2em 0 1em 0;
+  font-size: 1.5em;
+}
+.container-articles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+article {
+  width: 45%;
+}
+
+article img {
+  width: 100%;
+  border: 1em white solid;
+}
+
+.container-articles article:nth-child(even) {
+  margin-top: 15%;
+}
+
+article:nth-of-type(12) {
+  width: 38%;
+}
