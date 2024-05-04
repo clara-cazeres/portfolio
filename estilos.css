@@ -13,7 +13,7 @@ body {
   background-color: #eeeeee;
 }
 
-section {
+#main-inicio section {
   display: flex;
   justify-content: center;
 }
@@ -141,4 +141,144 @@ footer {
   display: flex;
   justify-content: center;
   align-content: center;
+}
+
+/* Ampliación diseño de identidad visual */
+
+#header-amp {
+  position: absolute;
+  left: 1.5em;
+  top: 1em;
+}
+#header-amp a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#header-amp a p {
+  margin-left: 0.5em;
+}
+
+#main-adi {
+  background-color: white;
+}
+
+#s-portada img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  margin-bottom: 1.6em;
+}
+
+#s-info {
+  text-align: center;
+  padding: 0 14em;
+}
+
+#s-info h1 {
+  font-size: 1.6em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.2em;
+}
+
+#s-info h2 {
+  font-size: 1.4em;
+  font-weight: 600;
+  text-transform: none;
+  margin: 0.8em 0 0.4em 0;
+}
+
+#s-info p {
+  margin-bottom: 0.8em;
+}
+
+.p-destacado {
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+#intro-bg {
+  background-color: black;
+  height: 22em;
+  display: flex;
+  margin: 4em 0;
+}
+
+#div-intro {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 14em;
+}
+
+#div-intro img {
+  height: 16em;
+  margin-right: 2em;
+}
+
+#div-intro p {
+  color: white;
+  font-weight: 300;
+}
+
+#div-colores {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  padding: 0 14em 4em 14em;
+  height: 22em;
+}
+
+#div-colores div {
+  width: 100%;
+}
+
+.color-1 {
+  background-color: #f6550d;
+}
+
+.color-2 {
+  background-color: #d4b748;
+}
+.color-3 {
+  background-color: #06b3b2;
+}
+.color-4 {
+  background-color: #decbe1;
+}
+.color-5 {
+  background-color: #ede9e1;
+}
+.color-6 {
+  background-color: black;
+}
+
+#div-tipografias {
+  background-color: #06b3b2;
+  padding: 4em 14em;
+}
+
+#s-aplicaciones {
+  padding: 4em 14em 4em 14em;
+}
+
+#grid-aplicaciones {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+}
+#grid-aplicaciones img {
+  width: 100%;
+  grid-column: 1 / span2;
+}
+
+#grid-aplicaciones img:nth-of-type(1),
+#grid-aplicaciones img:nth-of-type(2) {
+  grid-column: auto;
 }
