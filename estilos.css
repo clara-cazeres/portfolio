@@ -174,8 +174,24 @@ footer {
 }
 
 #s-info {
-  text-align: center;
   padding: 0 14em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#s-info div:first-of-type {
+  width: 60%;
+}
+#s-info div:nth-of-type(2) {
+  width: 35%;
+  align-self: flex-end;
+}
+
+#s-info div:last-of-type {
+  width: 100%;
+  padding-top: 4em;
 }
 
 #s-info h1 {
@@ -193,12 +209,28 @@ footer {
 }
 
 #s-info p {
-  margin-bottom: 0.8em;
+  margin-bottom: 0.2em;
 }
 
 .p-destacado {
   font-size: 1.2em;
   font-style: italic;
+}
+
+#s-info h4 {
+  text-transform: none;
+  font-size: 1.2em;
+  font-weight: 500;
+  padding-bottom: 1em;
+}
+#div-herramientas {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+#div-herramientas img {
+  width: 3em;
+  margin-right: 0.5em;
 }
 
 #intro-bg {
