@@ -12,9 +12,10 @@
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
+
 #body-inicio {
   background-color: #eeeeee;
-  background-image: url(img/fondo-linea.png);
+  background-image: url(img/fondo-linea-mobile.png);
   background-size: cover;
 }
 
@@ -25,8 +26,6 @@ body {
 
 .container {
   text-align: center;
-  width: 80%;
-  max-width: 1280px;
 }
 
 /* Header */
@@ -35,9 +34,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 5em;
   align-items: center;
-  padding: 0 3em;
+  padding: 1em 2em;
 }
 
 .icons a img {
@@ -49,21 +47,17 @@ body {
 /* Seccion inicio */
 
 #s-inicio {
-  padding: 4em 0 6em 0;
+  padding: 3em;
 }
 
-#s-inicio img {
-  width: 50%;
-  margin-bottom: 0.5em;
-}
 #s-inicio h1 {
   font-family: "Playfair Display", serif;
   font-weight: 500;
-  font-size: 10em;
+  font-size: 4em;
 }
 
 #s-inicio h2 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: 500;
   margin: 0.2em 0 2em 0;
   text-transform: none;
@@ -72,11 +66,7 @@ body {
 #destacado {
   font-style: italic;
   margin-bottom: 1em;
-  font-size: 1.2em;
-}
-
-#s-inicio p {
-  padding: 0 14em;
+  font-size: 1em;
 }
 
 /* icono flecha animado */
@@ -113,10 +103,10 @@ h2 {
 }
 
 #s-proyectos p {
-  margin: 0.5em 8em 0 8em;
+  margin-top: 0.8em;
 }
 #s-proyectos .container {
-  width: 70%;
+  width: 80%;
 }
 
 h3 {
@@ -128,8 +118,8 @@ h3 {
 
 #container-proyectos {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 3em;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1em;
   margin: 4em 0;
 }
 
@@ -206,7 +196,7 @@ article img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2em 0;
+  padding: 2em;
 }
 
 #form-contacto label,
@@ -215,7 +205,7 @@ article img {
 }
 
 #form-contacto textarea {
-  width: 50%;
+  width: 80%;
   height: 6em;
   padding: 1em;
   margin: 1em;
@@ -241,29 +231,33 @@ article img {
   transform: scale(1.05);
 }
 
-#info-contacto,
+#info-contacto {
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #info-contacto div {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   transition: ease 0.5s;
+  padding: 0.5em 0;
 }
-#info-contacto {
-  padding: 1em 0;
-}
+
 #info-contacto a {
   text-decoration: none;
   color: #254592;
   cursor: pointer;
-  margin-right: 2em;
 }
 
 #info-contacto .material-symbols-outlined {
   background-color: #4067bf;
   color: white;
   border-radius: 50%;
-  margin-right: 0.2em;
+  margin-right: 0.4em;
   padding: 0.2em;
   font-size: 1.2em;
 }
@@ -277,9 +271,9 @@ article img {
 #footer-inicio {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: flex-start;
   height: 40vh;
-  margin-top: 2em;
+  margin: 2em;
 }
 #footer-inicio .container {
   align-content: center;
@@ -462,3 +456,80 @@ svg {
 }
 
 /* RESPONSIVE */
+
+@media all and (min-width: 576px) {
+  #body-inicio {
+    background-image: url(img/fondo-linea.png);
+    background-size: cover;
+  }
+  .container {
+    width: 80%;
+    max-width: 1280px;
+  }
+
+  /* Header */
+
+  #header {
+    height: 5em;
+    padding: 0 3em;
+  }
+
+  /* Seccion inicio */
+
+  #s-inicio {
+    padding: 4em 0 6em 0;
+  }
+
+  #s-inicio h1 {
+    font-size: 10em;
+  }
+
+  #destacado {
+    font-size: 1.2em;
+  }
+
+  #s-inicio p {
+    padding: 0 14em;
+  }
+
+  /* Sección proyectos */
+  #s-proyectos p {
+    margin: 0.5em 8em 0 8em;
+  }
+  #s-proyectos .container {
+    width: 70%;
+  }
+
+  #container-proyectos {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3em;
+  }
+
+  #form-contacto textarea {
+    width: 50%;
+  }
+
+  /* Sección contacto */
+
+  #s-contacto {
+    margin-top: 4em;
+  }
+  #info-contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: ease 0.5s;
+    padding: 1em 0;
+  }
+
+  #info-contacto a {
+    margin-right: 2em;
+  }
+
+  /* Footer */
+
+  #footer-inicio {
+    align-items: center;
+  }
+}
