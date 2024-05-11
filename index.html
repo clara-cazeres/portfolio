@@ -62,24 +62,28 @@
 
       <section id="s-contacto">
         <div class="container">
-          <h1>Contacto</h1>
-          <p>¿Tienes alguna consulta? ¡Contáctame!</p>
-          <form action="/submit-your-form-handler" method="POST">
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" rows="4" cols="50"></textarea
-            ><br /><br />
-            <button type="submit">Enviar</button>
+          <h2>Contacto</h2>
+          <form id="form-contacto" action="">
+            <label for="mensaje">¿Tenés alguna consulta? Escribime!</label>
+            <textarea id="mensaje"></textarea>
+            <button id="bt-enviar">Enviar</button>
           </form>
-          <p>Puedes también contactarme a través de:</p>
-          <ul>
-            <li>Email: tu-email@example.com</li>
-            <li>Teléfono: +1234567890</li>
-          </ul>
+          <p>También me podés contactar por:</p>
+          <div id="info-contacto">
+            <div>
+              <span class="material-symbols-outlined"> mail </span>
+              <a href="mailto:claracazeres@gmail.com">claracazeres@gmail.com</a>
+            </div>
+            <div>
+              <span class="material-symbols-outlined"> call </span>
+              <a href="tel:+59899555759">+598 99 555 759</a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer>
+    <footer id="footer-inicio">
       <div class="container">
         <div>
           <p>Portfolio 2024 - Diseño Digital</p>

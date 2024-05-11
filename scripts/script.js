@@ -1,3 +1,5 @@
+//listar proyectos dinamicamente
+
 document.addEventListener('DOMContentLoaded', function() {
     listarProyectos();
 });
@@ -29,6 +31,7 @@ function listarProyectos() {
         .catch(error => console.error('Error:', error));
 }
 
+//animacion icono flecha
 
 document.addEventListener("DOMContentLoaded", function() {
     const flecha = document.querySelector('#icon-flecha .material-symbols-outlined');
@@ -48,5 +51,18 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   
   
+
+  //enviar mensaje del formulario al mail
+  document.getElementById("bt-enviar").addEventListener('click', enviarEmail);
+
+
+function enviarEmail() {
+    var mensaje = document.getElementById('mensaje').value;
+    var asunto = encodeURIComponent("Consulta portfolio");
+    var cuerpoMensaje = encodeURIComponent(mensaje);
+    var enlaceMailto = "mailto:claracazeres@gmail.com?subject=" + asunto + "&body=" + cuerpoMensaje;
+    window.location.href = enlaceMailto;
+}
+
   
 
