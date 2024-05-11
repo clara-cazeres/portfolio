@@ -37,12 +37,17 @@
             Este portfolio es el reflejo de este camino de búsqueda hacia mi
             identidad como diseñadora.
           </p>
+          <div id="icon-flecha">
+            <span class="material-symbols-outlined arrow-down">
+              arrow_downward_alt
+            </span>
+          </div>
         </div>
       </section>
 
       <section id="s-proyectos">
         <div class="container">
-          <div id="div-texto">
+          <div>
             <h2>Mis proyectos</h2>
             <p>
               Los proyectos que se muestran a continuación son principalmente
@@ -55,11 +60,23 @@
         </div>
       </section>
 
-      <!-- <section id="s-contacto">
+      <section id="s-contacto">
         <div class="container">
-          <h2>Contacto</h2>
+          <h1>Contacto</h1>
+          <p>¿Tienes alguna consulta? ¡Contáctame!</p>
+          <form action="/submit-your-form-handler" method="POST">
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea
+            ><br /><br />
+            <button type="submit">Enviar</button>
+          </form>
+          <p>Puedes también contactarme a través de:</p>
+          <ul>
+            <li>Email: tu-email@example.com</li>
+            <li>Teléfono: +1234567890</li>
+          </ul>
         </div>
-      </section> -->
+      </section>
     </main>
 
     <footer>
@@ -68,7 +85,6 @@
           <p>Portfolio 2024 - Diseño Digital</p>
           <p>Universidad ORT del Uruguay</p>
         </div>
-        <img src="" alt="" />
       </div>
     </footer>
     <script type="module" src="scripts/script.js"></script>
