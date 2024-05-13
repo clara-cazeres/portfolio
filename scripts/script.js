@@ -29,7 +29,6 @@ function listarProyectos() {
                     <img src="img/${proyecto.miniatura}" alt="${proyecto.titulo}" class="project-image">
                     <div class="hover-info">
                         <h4>${proyecto.titulo}</h4>
-                        <p>${proyecto.categoria}</p>
                     </div>
                 `;
 
