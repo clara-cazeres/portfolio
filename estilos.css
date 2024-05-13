@@ -280,18 +280,28 @@ article img {
 }
 
 /* Ampliación diseño de identidad visual */
-
-#header-amp {
+#body-amp {
+  background-image: url("img/linea-ampliacion.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   position: absolute;
-  left: 1.5em;
-  top: 1em;
+  z-index: -1;
+  width: 100%;
 }
+
 #header-amp a {
   text-decoration: none;
-  color: white;
+  color: black;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: flex-start;
+  padding: 1em;
+}
+
+#header-amp a:hover {
+  cursor: pointer;
+  color: #254592;
 }
 
 #header-amp a p {
@@ -311,23 +321,18 @@ article img {
 
 #s-info {
   padding: 0 14em;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
 }
 
 #s-info div:first-of-type {
-  width: 60%;
-}
-#s-info div:nth-of-type(2) {
-  width: 35%;
-  align-self: flex-end;
+  grid-row: span 2;
+  grid-column: span 2;
 }
 
 #s-info div:last-of-type {
-  width: 100%;
-  padding-top: 4em;
+  grid-column: span 3;
 }
 
 #s-info h1 {
@@ -357,8 +362,9 @@ article img {
   text-transform: none;
   font-size: 1.2em;
   font-weight: 500;
-  padding-bottom: 1em;
+  padding-bottom: 0.4em;
 }
+
 #div-herramientas {
   display: flex;
   flex-direction: row;
@@ -371,7 +377,6 @@ article img {
 }
 
 #intro-bg {
-  background-color: black;
   height: 22em;
   display: flex;
   margin: 4em 0;
@@ -396,63 +401,20 @@ article img {
   font-weight: 300;
 }
 
-#div-colores {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1em;
-  padding: 0 14em 4em 14em;
-  height: 22em;
-}
-
-#div-colores div {
+#s-aplicaciones img {
   width: 100%;
 }
 
-#div-tipografias {
-  background-color: #06b3b2;
-  padding: 4em 0;
+#div-video {
+  background-color: #eeeeee;
+  padding: 4em 14em;
 }
 
-#s-aplicaciones {
-  padding: 4em 14em 4em 14em;
-}
-
-#grid-aplicaciones {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1em;
-}
-#grid-aplicaciones img {
-  width: 100%;
-  grid-column: 1 / span2;
-}
-
-#grid-aplicaciones img:nth-of-type(1),
-#grid-aplicaciones img:nth-of-type(2) {
-  grid-column: auto;
-}
-
-/* prueba linea fondo */
-svg {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-}
-
-.line {
-  stroke-dasharray: 340;
-  stroke-dashoffset: 340;
-}
-
-#div-line {
-  height: 300vh;
-  font-size: 10em;
+#footer-amp {
   text-align: center;
-  padding-top: 1em;
+  background-color: black;
+  color: #eeeeee;
+  padding: 2em;
 }
 
 /* RESPONSIVE */
