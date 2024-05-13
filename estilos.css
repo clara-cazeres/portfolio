@@ -115,7 +115,6 @@ h3 {
   padding: 1em 0 1em 0;
   font-size: 1.5em;
 }
-
 #container-proyectos {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -126,93 +125,81 @@ h3 {
 article {
   width: 100%;
   justify-self: center;
-}
-
-article img {
-  width: 100%;
-  border: 1em white solid;
-}
-
-/* hover proyectos */
-.project-article {
   position: relative;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-.project-article img {
+article img {
   width: 100%;
   transition: opacity 0.6s ease;
+  border: 1em white solid;
 }
 
+/* Configuración inicial para la imagen de fondo y la información de hover */
+.background-img,
 .hover-info {
   position: absolute;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  transition: opacity 0.6s ease;
+  opacity: 0; /* Ocultos por defecto */
+  z-index: -1; /* La imagen de fondo detrás del contenido */
+}
+
+/* Información de hover */
+.hover-info {
   padding: 1em;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.7
-  ); /* Semi-transparente para ver la imagen de fondo */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  height: 30%; /* Ajusta según necesidades */
-  opacity: 0;
-  transition: opacity 0.6s ease;
+  z-index: 1; /* Asegurarse de que esté encima de la imagen de fondo */
 }
 
-.hover-info h4 {
+.hover-info h4,
+.hover-info p {
+  margin: 0;
   text-transform: uppercase;
   font-size: 1.2em;
 }
 
-.hover-info p {
-  color: #4067bf;
-  font-size: 1.2em;
-  width: 100%;
-}
-
+/* Efectos al hacer hover sobre el artículo */
 .project-article:hover {
-  transform: scale(1.05); /* Escala el artículo un 5% más grande */
+  transform: scale(1.05);
 }
 
 .project-article:hover .project-image {
-  opacity: 0; /* oculta la imagen */
+  opacity: 0; /* Oculta la imagen miniatura */
 }
 
+.project-article:hover .background-img,
 .project-article:hover .hover-info {
-  opacity: 1; /* muestra el texto  */
+  opacity: 1; /* Muestra la imagen de fondo y la información */
 }
 
-/* Estilos para el fondo según categoría */
-.categoria-web .background-img,
-.project-article:hover.categoria-web .hover-info p {
-  background-image: url("img/categorias/c4-web.png");
-  color: #dbbd3e;
+/* Colores específicos por categoría y fondos */
+.categoria-web .background-img {
+  background-image: url("img/categorias/web.png");
+}
+.categoria-identidad .background-img {
+  background-image: url("img/categorias/identidad.png");
+}
+.categoria-editorial .background-img {
+  background-image: url("img/categorias/editorial.png");
+}
+.categoria-interfaces .background-img {
+  background-image: url("img/categorias/interfaces.png");
 }
 
-.categoria-identidad .background-img,
-.project-article:hover.categoria-identidad .hover-info p {
-  background-image: url("img/categorias/c1-identidad.png");
-  color: #6f8c31;
-}
-
-.categoria-editorial .background-img,
-.project-article:hover.categoria-editorial .hover-info p {
-  background-image: url("img/categorias/c2-editorial.png");
-  color: #cc6a27;
-}
-
-.categoria-interfaces .background-img,
+.project-article:hover.categoria-web .hover-info p,
+.project-article:hover.categoria-identidad .hover-info p,
+.project-article:hover.categoria-editorial .hover-info p,
 .project-article:hover.categoria-interfaces .hover-info p {
-  background-image: url("img/categorias/c3-interfaces.png");
-  color: #b276af;
+  color: #ffffff; /* Cambia según necesidad */
 }
 
 /* Sección contacto */
