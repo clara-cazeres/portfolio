@@ -58,19 +58,13 @@ function buildProyectoHTML(proyecto) {
                     <div><p>${proyecto.descripcion}</p></div>
                 </div>
             </div>
-            <div>
+            <div id="div-paletas">
                 <img src="img/${proyecto.colores}" alt="colores" />
                 <img src="img/${proyecto.tipografias}" alt="tipografias" />
             </div>
         </section>`;
 }
 
-/* function buildAplicacionesHTML(proyecto) {
-    return `
-        <section id="s-aplicaciones">
-            ${proyecto.imagenes.map(img => `<img src="img/${img}" alt="aplicacion" />`).join('')}
-        </section>`;
-} */
 
 function buildAplicacionesHTML(proyecto) {
     let html = `

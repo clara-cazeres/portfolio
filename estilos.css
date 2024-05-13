@@ -401,7 +401,8 @@ article img {
   font-weight: 300;
 }
 
-#s-aplicaciones img {
+#s-aplicaciones img,
+#div-paletas img {
   width: 100%;
 }
 
