@@ -138,10 +138,7 @@ article img {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  /* opacity: 0;
-  transform: translateY(20px);
-   */
-  transition: opacity 1s ease, transform 1s ease;
+  transition: transform 0.3s ease;
 }
 
 .project-article img {
@@ -151,18 +148,22 @@ article img {
 
 .hover-info {
   position: absolute;
-  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 2em;
-  background: white;
-  color: black;
+  padding: 1em;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Semi-transparente para ver la imagen de fondo */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0; /* texto oculto*/
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 30%; /* Ajusta según necesidades */
+  opacity: 0;
   transition: opacity 0.6s ease;
 }
 
@@ -187,6 +188,31 @@ article img {
 
 .project-article:hover .hover-info {
   opacity: 1; /* muestra el texto  */
+}
+
+/* Estilos para el fondo según categoría */
+.categoria-web .background-img,
+.project-article:hover.categoria-web .hover-info p {
+  background-image: url("img/categorias/web.png");
+  color: #dbbd3e;
+}
+
+.categoria-identidad .background-img,
+.project-article:hover.categoria-identidad .hover-info p {
+  background-image: url("img/categorias/identidad.png");
+  color: #6f8c31;
+}
+
+.categoria-editorial .background-img,
+.project-article:hover.categoria-editorial .hover-info p {
+  background-image: url("img/categorias/editorial.png");
+  color: #cc6a27;
+}
+
+.categoria-interfaces .background-img,
+.project-article:hover.categoria-interfaces .hover-info p {
+  background-image: url("img/categorias/interfaces.png");
+  color: #b276af;
 }
 
 /* Sección contacto */

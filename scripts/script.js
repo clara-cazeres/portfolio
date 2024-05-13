@@ -1,17 +1,27 @@
 //listar proyectos dinamicamente
 
-document.addEventListener('DOMContentLoaded', function() {
-    listarProyectos();
-});
-
 function listarProyectos() {
     fetch('https://portfolio-backend-etuy.onrender.com/proyectos')
         .then(response => response.json())
         .then(proyectos => {
             const divProyectos = document.getElementById('container-proyectos');
             proyectos.forEach(proyecto => {
+                const categoriaClase = getCategoriaClase(proyecto.categoria.toLowerCase());
                 const article = document.createElement('article');
-                article.className = 'project-article'; // Añadir una clase para el estilo
+                article.className = `project-article ${categoriaClase}`; // clase de categoría
+
+                // div para la imagen de fondo
+                const backgroundDiv = document.createElement('div');
+                backgroundDiv.className = 'background-img';
+                backgroundDiv.style.backgroundImage = `url('img/categorias/${categoriaClase}.png')`;
+                backgroundDiv.style.position = 'absolute';
+                backgroundDiv.style.top = '0';
+                backgroundDiv.style.left = '0';
+                backgroundDiv.style.right = '0';
+                backgroundDiv.style.bottom = '0';
+                backgroundDiv.style.backgroundSize = 'cover';
+
+                //contenido del article
                 article.innerHTML = `
                     <img src="img/${proyecto.miniatura}" alt="${proyecto.titulo}" class="project-image">
                     <div class="hover-info">
@@ -20,9 +30,11 @@ function listarProyectos() {
                     </div>
                 `;
 
+                // div de fondo al principio del article
+                article.prepend(backgroundDiv);
                 divProyectos.appendChild(article);
 
-                // Redirigir a la página de ampliación
+                // redireccionar
                 article.addEventListener('click', () => {
                     window.location.href = `ampliacion-diseno.html?id=${proyecto._id}`;
                 });
@@ -30,6 +42,23 @@ function listarProyectos() {
         })
         .catch(error => console.error('Error:', error));
 }
+
+// obtener la clase de categoría según el valor de la categoría
+function getCategoriaClase(categoria) {
+    switch (categoria) {
+        case "diseño web":
+            return "categoria-web";
+        case "diseño de identidad visual":
+            return "categoria-identidad";
+        case "diseño editorial":
+            return "categoria-editorial";
+        case "diseño de interfaces":
+            return "categoria-interfaces";
+        default:
+            return "";
+    }
+}
+
 
 //animacion icono flecha
 
