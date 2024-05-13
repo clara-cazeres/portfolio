@@ -379,7 +379,7 @@ article img {
 #intro-bg {
   height: 22em;
   display: flex;
-  margin: 4em 0;
+  margin: 4em 0 0 0;
 }
 
 #div-intro {
