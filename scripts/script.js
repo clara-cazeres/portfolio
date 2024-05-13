@@ -1,4 +1,7 @@
 //listar proyectos dinamicamente
+document.addEventListener('DOMContentLoaded', function() {
+    listarProyectos();
+});
 
 function listarProyectos() {
     fetch('https://portfolio-backend-etuy.onrender.com/proyectos')
@@ -81,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
   
 
-  //enviar mensaje del formulario al mail
+//enviar mensaje del formulario al mail
   document.getElementById("bt-enviar").addEventListener('click', enviarEmail);
 
 
