@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function listarProyectos() {
-    fetch('http://localhost:3000/proyectos')
+    fetch('https://portfolio-backend-etuy.onrender.com/proyectos')
         .then(response => response.json())
         .then(proyectos => {
             const divProyectos = document.getElementById('container-proyectos');

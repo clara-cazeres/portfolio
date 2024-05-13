@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const parametros = new URLSearchParams(window.location.search);
     const idProyecto = parametros.get('id');
     
-    fetch(`http://localhost:3000/proyecto/${idProyecto}`)
+    fetch(`https://portfolio-backend-etuy.onrender.com/proyecto/${idProyecto}`)
         .then(response => response.json())
         .then(proyecto => {
             const mainProyecto = document.getElementById('main-adi');
